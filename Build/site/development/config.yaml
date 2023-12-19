@@ -1,0 +1,7 @@
+base: 'https://cookie-content.ddev.site/'
+baseVariants:
+  -
+    base: 'https://dev.cookie-content.ddev.site/'
+    condition: 'getenv("HTTP_HOST") == "dev.cookie-content.ddev.site"'
+rootPageId: 1
+websiteTitle: 'Cookie content dev site'

@@ -1,0 +1,104 @@
+{
+	"name": "buepro/typo3-cookie-content",
+	"description": "Extension to enable content dependent on a cookie, usually a GDPR consent cookie. Without affirmative cookie a place holder content is shown.",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"type": "typo3-cms-extension",
+	"keywords": [
+		"TYPO3 CMS",
+		"extension",
+		"cookie",
+		"consent",
+		"content"
+	],
+	"authors": [
+		{
+			"name": "Roman Büchler",
+			"email": "rb@buechler.pro",
+			"homepage": "https://www.buechler.pro/",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://extensions.typo3.org/extension/cookie_content",
+	"support": {
+		"issues": "https://github.com/buepro/typo3-cookie_content/issues",
+		"source": "https://github.com/buepro/typo3-cookie_content",
+		"docs": "https://docs.typo3.org/p/buepro/typo3-cookie_content/main/en-us/"
+	},
+	"require": {
+		"php": ">=8.1",
+		"bk2k/bootstrap-package": "^12.0.7",
+		"typo3/cms-core": "^11.5"
+	},
+	"require-dev": {
+		"b13/container": "^2.3.1",
+		"ergebnis/composer-normalize": "^2.15.0",
+		"friendsofphp/php-cs-fixer": "^3.14",
+		"friendsoftypo3/phpstan-typo3": "^0.9.0",
+		"overtrue/phplint": "^5.3.0",
+		"phpstan/phpstan": "^1.8.5",
+		"phpstan/phpstan-deprecation-rules": "^1.0.0",
+		"phpstan/phpstan-phpunit": "^1.1.1",
+		"phpstan/phpstan-strict-rules": "^1.4.3",
+		"typo3/cms-base-distribution": "^11.5",
+		"typo3/cms-impexp": "^11.5",
+		"typo3/cms-lowlevel": "^11.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Buepro\\CookieContent\\": "Classes/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"bin-dir": ".build/bin",
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "0.1.x-dev"
+		},
+		"typo3/cms": {
+			"app-dir": ".build",
+			"extension-key": "cookie_content",
+			"web-dir": ".build/public"
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"[ -d .build/public/_assets ] || mkdir -p .build/public/typo3conf/ext/",
+			"[ -d .build/public/_assets ] || [ -L .build/public/typo3conf/ext/cookie_content ] || ln -snvf ../../../../. .build/public/typo3conf/ext/cookie_content",
+			"if [ ${IS_DDEV_PROJECT:-0} = \"true\" ]; then mkdir -p config/sites; fi",
+			"if [ ${IS_DDEV_PROJECT:-0} = \"true\" ] && [ ! -e \"config/sites/development\" ]; then ln -svf ../../Build/site/development config/sites/development; fi"
+		],
+		"ci:php:cs": [
+			"php-cs-fixer --diff -v --dry-run fix",
+			"php-cs-fixer --config=.php-cs-fixer.dist-strict.php --diff -v --dry-run fix"
+		],
+		"ci:php:lint": [
+			"phplint"
+		],
+		"ci:php:stan": [
+			"phpstan analyze --configuration Build/phpstan.neon"
+		],
+		"fix": [
+			"@fix:composer:normalize",
+			"@fix:php:cs"
+		],
+		"fix:composer:normalize": "@composer normalize",
+		"fix:php:cs": [
+			"php-cs-fixer --diff -v fix",
+			"php-cs-fixer --config=.php-cs-fixer.dist-strict.php --diff -v fix"
+		],
+		"fix:php:stan": [
+			"phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+# Root folders
+/.build/
+/.idea/
+/Build/node_modules
+/config/
+/Documentation-GENERATED-temp/
+/var/
+
+# Root files
+/composer.lock
+
+# Files
+*.cache
+*.zip

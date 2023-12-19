@@ -1,0 +1,7 @@
+[request && traverse(request.getCookieParams(), 'cookieconsent_status') != 'allow']
+lib.contentElement.stdWrap.setContentToCurrent = 1
+lib.contentElement.stdWrap.cObject = FLUIDTEMPLATE
+lib.contentElement.stdWrap.cObject {
+    file = EXT:cookie_content/Resources/Private/Templates/Default.html
+}
+[END]

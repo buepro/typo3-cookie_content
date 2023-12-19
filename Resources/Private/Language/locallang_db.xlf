@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2023-12-19T09:11:39Z"
+		  product-name="cookie_content">
+		<header/>
+		<body>
+			<trans-unit id="restrict_access">
+				<source>Cookie conditional content</source>
+			</trans-unit>
+			<trans-unit id="restrict_access.description">
+				<source>If enabled the content is only shown upon affirmative cookie.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
