@@ -26,15 +26,33 @@ defined('TYPO3') or die('Access denied.');
                 ],
             ],
         ],
+        'tx_cookie_content_reload_page' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:reload_page',
+            'description' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:reload_page.description',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        0 => '',
+                        'label' => '',
+                    ],
+                ],
+            ],
+        ],
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         $newColumns
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    $GLOBALS['TCA']['tt_content']['palettes']['cookie_content'] = [
+        'showitem' => 'tx_cookie_content_restrict_access, tx_cookie_content_reload_page',
+    ];
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'hidden',
-        'tx_cookie_content_restrict_access',
-        'after:hidden'
+        '--palette--;LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:palette.cookie_content;cookie_content',
+        '',
+        'after: hidden'
     );
 })();

@@ -1,7 +1,19 @@
 [request && traverse(request.getCookieParams(), 'cookieconsent_status') != 'allow']
 lib.contentElement.stdWrap.setContentToCurrent = 1
-lib.contentElement.stdWrap.cObject = FLUIDTEMPLATE
-lib.contentElement.stdWrap.cObject {
-    file = EXT:cookie_content/Resources/Private/Templates/Default.html
+lib.contentElement.stdWrap.override.if.isTrue.field = tx_cookie_content_restrict_access
+lib.contentElement.stdWrap.override.cObject = FLUIDTEMPLATE
+lib.contentElement.stdWrap.override.cObject {
+    templateName = BootstrapPackage
+    layoutRootPaths < lib.contentElement.layoutRootPaths
+    partialRootPaths < lib.contentElement.partialRootPaths
+    partialRootPaths {
+        1703085222 = EXT:cookie_content/Resources/Private/Partials
+    }
+    templateRootPaths {
+        10 = EXT:cookie_content/Resources/Private/Templates
+    }
+    settings {
+        dataProtectionDeclarationTypolink = t3://page?uid=1#c5
+    }
 }
 [END]

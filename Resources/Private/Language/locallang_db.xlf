@@ -4,11 +4,20 @@
 		  product-name="cookie_content">
 		<header/>
 		<body>
-			<trans-unit id="restrict_access">
+			<trans-unit id="palette.cookie_content">
 				<source>Cookie conditional content</source>
+			</trans-unit>
+			<trans-unit id="restrict_access">
+				<source>Restrict access</source>
 			</trans-unit>
 			<trans-unit id="restrict_access.description">
 				<source>If enabled the content is only shown upon affirmative cookie.</source>
+			</trans-unit>
+			<trans-unit id="reload_page">
+				<source>Reload page</source>
+			</trans-unit>
+			<trans-unit id="reload_page.description">
+				<source>If enabled the page will reloaded on enabling the cookie usage.</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -25,6 +25,29 @@ the user to understand the legal context.
 Currently the extension works together with the
 `Bootstrap Package <https://extensions.typo3.org/extension/bootstrap_package>`__.
 
+Usage
+=====
+
+Define the behaviour on the content element access register.
+
+Configuration
+=============
+
+In case together with a content element javascript is added to the page the
+embedding has to be adjusted. For this move the javascript definitions to a
+condition within the typoscript setup:
+
+.. code-block:: typoscript
+
+   [request && traverse(request.getCookieParams(), 'cookieconsent_status') != 'allow']
+   // Define here the conditional javascript
+   [END]
+
+
+References
+==========
+*  `Cookie consent package <https://github.com/osano/cookieconsent>`__
+
 :Repository:  https://github.com/buepro/typo3-cookie_content
 :Read online: https://docs.typo3.org/p/buepro/typo3-cookie_content/main/en-us/
 :TER:         https://extensions.typo3.org/extension/cookie_content

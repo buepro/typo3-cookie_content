@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="card">
+    <div class="card-header">
+        {f:translate(key: 'placeholderDialog.title', extensionName: 'cookie_content')}
+    </div>
+    <div class="card-body">
+        <p>
+            <f:render partial="PlaceholderDescription" arguments="{_all}" />
+        </p>
+        <p><button class="btn-ccp btn btn-primary" data-ccid="{data.uid}" data-reload="{data.tx_cookie_content_reload_page}">{f:translate(key: 'yes', extensionName: 'cookie_content')}</button></p>
+    </div>
+</div>
+<template id="ccid-{data.uid}">{current -> f:format.raw()}</template>
+</html>
