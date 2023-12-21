@@ -1,6 +1,6 @@
 {
 	"name": "buepro/typo3-cookie-content",
-	"description": "Extension to enable content dependent on a cookie, usually a GDPR consent cookie. Without affirmative cookie a place holder content is shown.",
+	"description": "This extension is intended to make websites GDPR compliant by not rendering data critical content by default. Instead a placeholder message is shown helping the user to understand the legal context. Requires the bootstrap package.",
 	"license": [
 		"GPL-2.0-or-later"
 	],

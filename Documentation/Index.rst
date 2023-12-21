@@ -1,3 +1,38 @@
+.. include:: /Includes.rst.txt
+
+.. _start:
+
+=================
+Cookie content
+=================
+
+:Extension key:
+   cookie_content
+
+:Package name:
+   buepro/typo3-cookie-content
+
+:Version:
+   |release|
+
+:Language:
+   en
+
+:Author:
+   Roman Büchler
+
+:Email:
+   rb@buechler.pro
+
+:License:
+   This document is published under the Open Content License
+   available from https://www.openhub.net/licenses/opl.
+
+:Rendered:
+   |today|
+
+----
+
 .. image:: https://poser.pugx.org/buepro/typo3-cookie-content/v/stable.svg
    :alt: Latest Stable Version
    :target: https://extensions.typo3.org/extension/cookie_content/
@@ -18,7 +53,7 @@
 TYPO3 extension ``cookie_content``
 ==================================
 
-.. figure:: /Documentation/Images/Placeholder.webp
+.. figure:: /Images/Placeholder.webp
    :alt: Cookie content placeholder
 
 |
@@ -32,7 +67,7 @@ Usage
 
 Define the behaviour on the content element access register.
 
-.. figure:: /Documentation/Images/ContentElement.webp
+.. figure:: /Images/ContentElement.webp
    :alt: Access register from content element
 
 Installation
@@ -40,7 +75,7 @@ Installation
 
 Add the static configuration to your template record:
 
-.. figure:: /Documentation/Images/Template.webp
+.. figure:: /Images/Template.webp
    :alt: Template record with static configuration for cookie content
 
 Configuration
