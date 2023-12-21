@@ -27,23 +27,22 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-cookie_content/main/en-us/"
 	},
 	"require": {
-		"php": ">=8.1",
-		"bk2k/bootstrap-package": "^12.0.7",
-		"typo3/cms-core": "^11.5"
+		"bk2k/bootstrap-package": "^12.0.10 || ^13.0.5 || 14.0.7",
+		"typo3/cms-core": "^11.5 || ^12.4"
 	},
 	"require-dev": {
 		"b13/container": "^2.3.1",
-		"ergebnis/composer-normalize": "^2.15.0",
+		"ergebnis/composer-normalize": "^2.28.0",
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
-		"overtrue/phplint": "^5.3.0",
+		"overtrue/phplint": "3.2.0 || ^4.3.0 || ^5.3.0",
 		"phpstan/phpstan": "^1.8.5",
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
-		"typo3/cms-base-distribution": "^11.5",
-		"typo3/cms-impexp": "^11.5",
-		"typo3/cms-lowlevel": "^11.5"
+		"typo3/cms-base-distribution": "^11.5 || ^12.4",
+		"typo3/cms-impexp": "^11.5 || ^12.4",
+		"typo3/cms-lowlevel": "^11.5 || ^12.4"
 	},
 	"autoload": {
 		"psr-4": {
