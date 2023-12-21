@@ -78,6 +78,11 @@
 			"if [ ${IS_DDEV_PROJECT:-0} = \"true\" ]; then mkdir -p config/sites; fi",
 			"if [ ${IS_DDEV_PROJECT:-0} = \"true\" ] && [ ! -e \"config/sites/development\" ]; then ln -svf ../../Build/site/development config/sites/development; fi"
 		],
+		"ci": [
+			"@ci:php:cs",
+			"@ci:php:lint",
+			"@ci:php:stan"
+		],
 		"ci:php:cs": [
 			"php-cs-fixer --diff -v --dry-run fix",
 			"php-cs-fixer --config=.php-cs-fixer.dist-strict.php --diff -v --dry-run fix"
