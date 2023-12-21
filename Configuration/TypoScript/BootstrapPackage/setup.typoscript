@@ -5,12 +5,12 @@ lib.contentElement {
         override = CookieContent
         override.if {
             value = 1
-            equals.field = tx_cookie_content_restrict_access
+            equals.field = tx_cookie_content_show_placeholder
             isTrue.field = tx_cookie_content_reload_page
         }
     }
     stdWrap.setContentToCurrent = 1
-    stdWrap.override.if.isTrue.field = tx_cookie_content_restrict_access
+    stdWrap.override.if.isTrue.field = tx_cookie_content_show_placeholder
     stdWrap.override.cObject = FLUIDTEMPLATE
     stdWrap.override.cObject {
         templateName = BootstrapPackage

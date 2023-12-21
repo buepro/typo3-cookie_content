@@ -11,10 +11,10 @@ defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
     $newColumns = [
-        'tx_cookie_content_restrict_access' => [
+        'tx_cookie_content_show_placeholder' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:restrict_access',
-            'description' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:restrict_access.description',
+            'label' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:show_placeholder',
+            'description' => 'LLL:EXT:cookie_content/Resources/Private/Language/locallang_db.xlf:show_placeholder.description',
             'config' => [
                 'type' => 'check',
                 'renderType' => 'checkboxToggle',
@@ -47,7 +47,7 @@ defined('TYPO3') or die('Access denied.');
         $newColumns
     );
     $GLOBALS['TCA']['tt_content']['palettes']['cookie_content'] = [
-        'showitem' => 'tx_cookie_content_restrict_access, tx_cookie_content_reload_page',
+        'showitem' => 'tx_cookie_content_show_placeholder, tx_cookie_content_reload_page',
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
