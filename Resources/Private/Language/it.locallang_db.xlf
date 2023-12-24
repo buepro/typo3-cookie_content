@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2023-12-19T09:11:39Z" product-name="cookie_content" target-language="it">
+    <header/>
+    <body>
+      <trans-unit id="palette.cookie_content" approved="yes">
+        <source>Cookie content</source>
+        <target state="final">Contenuto dei cookie</target>
+      </trans-unit>
+      <trans-unit id="show_placeholder" approved="yes">
+        <source>Show placeholder</source>
+        <target state="final">Mostra segnaposto</target>
+      </trans-unit>
+      <trans-unit id="show_placeholder.description" approved="yes">
+        <source>If enabled the content is only shown when cookies are consented.</source>
+        <target state="final">Se abilitato, il contenuto viene visualizzato solo quando i cookie sono autorizzati.</target>
+      </trans-unit>
+      <trans-unit id="reload_page" approved="yes">
+        <source>Reload page</source>
+        <target state="final">Ricarica la pagina</target>
+      </trans-unit>
+      <trans-unit id="reload_page.description" approved="yes">
+        <source>If enabled the page will reloaded on consenting the cookie usage.</source>
+        <target state="final">Se abilitata, la pagina verrà ricaricata sul consenso all'utilizzo dei cookie.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
