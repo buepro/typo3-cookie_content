@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2023-12-20T09:11:39Z" product-name="cookie_content" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="yes" approved="yes">
+        <source>Yes</source>
+        <target state="final">Oui</target>
+      </trans-unit>
+      <trans-unit id="dataProtectionDeclaration" approved="yes">
+        <source>data protection declaration</source>
+        <target state="final">déclaration de protection des données</target>
+      </trans-unit>
+      <trans-unit id="placeholderDialog.title" approved="yes">
+        <source>Dataprotection-Placeholder</source>
+        <target state="final">Placeholder de protection des données</target>
+      </trans-unit>
+      <trans-unit id="placeholderDialog.description" approved="yes">
+        <source>This placeholder is shown because you did not consent the usage from data-protection related cookies and tools. On this website the cookies and tools mentioned in the %s enrich your browsing experience. Would you like to use them know?</source>
+        <target state="final">Cet espace est affiché parce que vous n'avez pas consenti à l'utilisation de cookies et d'outils liés à la protection des données. Sur ce site web, les cookies et outils mentionnés dans les %s enrichissent votre expérience de navigation. Souhaitez-vous les utiliser en connaissance de cause?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
