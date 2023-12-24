@@ -85,27 +85,27 @@ Add the static configuration to your template record:
 Configuration
 =============
 
-Typoscript setup
-----------------
+Typoscript setup (optional)
+---------------------------
 
-Define the data protection declaration page with the following typoscript
-setup:
+.. _tsDataProtectionDeclarationTypolink:
 
-.. code-block:: typoscript
+Placeholder
+~~~~~~~~~~~
 
-   lib {
-       contentElement.stdWrap.override.cObject {
-           settings {
-               dataProtectionDeclarationTypolink = t3://page?uid=344
-           }
-       }
-   }
+.. confval:: dataProtectionDeclarationTypolink
 
-Note that the link has to be adjusted. Adjust `t3://page?uid=344` according
-your site.
+   :type: string
+   :Default: `{$page.theme.cookieconsent.content.href}`
+   :Example: t3://page?uid=1#c5
+   :Path: lib.contentElement.stdWrap.override.cObject.settings
+   :Scope: TypoScript Setup
 
-Javascript
-----------
+   Defines the data protection declaration page by the typolink parameter.
+   The value will be passed to :ref:`t3viewhelper:link.typolink_parameter`.
+
+Javascript (optional)
+---------------------
 
 Modules might includes data protection related code independent of a content
 element usage. Prevent embedding such code using the following typoscript
@@ -116,7 +116,6 @@ setup pattern:
    [{$page.theme.cookieconsent.enable} == 1 && request && traverse(request.getCookieParams(), 'cookieconsent_status') != 'allow']
    // Define here the conditional javascript
    [END]
-
 
 References
 ==========

@@ -23,7 +23,7 @@ lib.contentElement {
             10 = EXT:cookie_content/Resources/Private/Templates
         }
         settings {
-            dataProtectionDeclarationTypolink = t3://page?uid=1#c5
+            dataProtectionDeclarationTypolink = {$page.theme.cookieconsent.content.href}
         }
     }
 }

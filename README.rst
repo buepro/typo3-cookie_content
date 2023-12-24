@@ -39,50 +39,6 @@ Define the behaviour on the content element access register.
 .. figure:: /Documentation/Images/ContentElement.webp
    :alt: Access register from content element
 
-Installation
-============
-
-Add the static configuration to your template record:
-
-.. figure:: /Documentation/Images/Template.webp
-   :alt: Template record with static configuration for cookie content
-
-Configuration
-=============
-
-Typoscript setup
-----------------
-
-Define the data protection declaration page with the following typoscript
-setup:
-
-.. code-block:: typoscript
-
-   lib {
-       contentElement.stdWrap.override.cObject {
-           settings {
-               dataProtectionDeclarationTypolink = t3://page?uid=344
-           }
-       }
-   }
-
-Note that the link has to be adjusted. Adjust `t3://page?uid=344` according
-your site.
-
-Javascript
-----------
-
-Modules might includes data protection related code independent of a content
-element usage. Prevent embedding such code using the following typoscript
-setup pattern:
-
-.. code-block:: typoscript
-
-   [{$page.theme.cookieconsent.enable} == 1 && request && traverse(request.getCookieParams(), 'cookieconsent_status') != 'allow']
-   // Define here the conditional javascript
-   [END]
-
-
 References
 ==========
 
