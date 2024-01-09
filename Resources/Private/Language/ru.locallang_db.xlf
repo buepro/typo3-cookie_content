@@ -3,25 +3,25 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2023-12-19T09:11:39Z" product-name="cookie_content" target-language="ru">
     <header/>
     <body>
-      <trans-unit id="palette.cookie_content">
+      <trans-unit id="palette.cookie_content" approved="yes">
         <source>Cookie content</source>
-        <target state="translated">Cookie контент</target>
+        <target state="final">Cookie контент</target>
       </trans-unit>
-      <trans-unit id="show_placeholder">
+      <trans-unit id="show_placeholder" approved="yes">
         <source>Show placeholder</source>
-        <target state="translated">Показать заполнитель</target>
+        <target state="final">Показать заполнитель</target>
       </trans-unit>
-      <trans-unit id="show_placeholder.description">
+      <trans-unit id="show_placeholder.description" approved="yes">
         <source>If enabled the content is only shown when cookies are consented.</source>
-        <target state="translated">Если включено, контент отображается только при согласии cookie файлов.</target>
+        <target state="final">Если включено, контент отображается только при согласии cookie файлов.</target>
       </trans-unit>
-      <trans-unit id="reload_page">
+      <trans-unit id="reload_page" approved="yes">
         <source>Reload page</source>
-        <target state="translated">Обновить страницу</target>
+        <target state="final">Обновить страницу</target>
       </trans-unit>
-      <trans-unit id="reload_page.description">
+      <trans-unit id="reload_page.description" approved="yes">
         <source>If enabled the page will reloaded on consenting the cookie usage.</source>
-        <target state="translated">Если включено, страница будет обновлена с согласия использования cookie файлов.</target>
+        <target state="final">Если включено, страница будет обновлена с согласия использования cookie файлов.</target>
       </trans-unit>
     </body>
   </file>
