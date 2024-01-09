@@ -3,21 +3,21 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2023-12-20T09:11:39Z" product-name="cookie_content" target-language="ru">
     <header/>
     <body>
-      <trans-unit id="yes">
+      <trans-unit id="yes" approved="yes">
         <source>Yes</source>
-        <target state="translated">Да</target>
+        <target state="final">Да</target>
       </trans-unit>
-      <trans-unit id="dataProtectionDeclaration">
+      <trans-unit id="dataProtectionDeclaration" approved="yes">
         <source>data protection declaration</source>
-        <target state="translated">объявление о защите данных</target>
+        <target state="final">объявление о защите данных</target>
       </trans-unit>
-      <trans-unit id="placeholderDialog.title">
+      <trans-unit id="placeholderDialog.title" approved="yes">
         <source>Dataprotection-Placeholder</source>
-        <target state="translated">Защита данных-Заполнитель</target>
+        <target state="final">Защита данных-Заполнитель</target>
       </trans-unit>
-      <trans-unit id="placeholderDialog.description">
+      <trans-unit id="placeholderDialog.description" approved="yes">
         <source>This placeholder is shown because you did not consent the usage from data-protection related cookies and tools. On this website the cookies and tools mentioned in the %s enrich your browsing experience. Would you like to use them know?</source>
-        <target state="translated">Этот заполнитель отображается, потому что вы не дали согласия на использование cookie файлов и инструментов, связанных с защитой данных. На этом сайте упомянутые cookie файлы и инструменты %s обогащают ваш опыт работы в браузере. Хотели бы вы знать, как их использовать?</target>
+        <target state="final">Этот заполнитель отображается, потому что вы не дали согласия на использование cookie файлов и инструментов, связанных с защитой данных. На этом сайте упомянутые cookie файлы и инструменты %s обогащают ваш опыт работы в браузере. Хотели бы вы знать, как их использовать?</target>
       </trans-unit>
     </body>
   </file>
